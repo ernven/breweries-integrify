@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Grid } from '@mui/material'
 
-import BreweryCard from './BreweryCard'
+import Search from './MainComponents/Search'
+import BreweryList from './MainComponents/BreweryList'
 
 function Main () {
   // Breweries data is stored in a state.
@@ -16,13 +16,10 @@ function Main () {
   }, [])
 
   return (
-    <Grid container spacing={6}>
-      {breweries.map(i => (
-        <Grid item xs={3}>
-          <BreweryCard key={i.key} brewery={i} />
-        </Grid>
-      ))}
-    </Grid>
+    <div>
+      <Search />
+      <BreweryList breweries={breweries} />
+    </div>
   )
 }
 
