@@ -8,7 +8,7 @@ const BreweryCard = ({ brewery }) => (
         {brewery.name}
       </Typography>
       <Typography variant="body2">
-        {'Type: ' + brewery.brewery_type}
+        Type: {brewery.brewery_type}
       </Typography>
       <Typography variant="body2">
         {brewery.state ? brewery.city + ', ' + brewery.state : brewery.city + ', ' + brewery.country}

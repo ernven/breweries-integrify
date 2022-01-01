@@ -2,20 +2,32 @@ import { Card, CardContent, CardActions, Typography, Button } from '@mui/materia
 
 const DetailCard = ({ brewery }) => (
   <Card sx={{width: '18em', height: '13em', borderRadius: '1.2em'}}>
-    <CardContent sx={{height: '35%', padding: '2.6em'}}>
-      <Typography variant="body2">
+    <CardContent sx={{padding: '2.6em'}}>
+
+      <Typography variant="h6">
         {brewery.name}
       </Typography>
+
       <Typography variant="body2">
         {'Type: ' + brewery.brewery_type}
       </Typography>
+
+      <Typography>
+        {brewery.street}
+      </Typography>
       <Typography variant="body2">
-        {brewery.city + ', ' + brewery.state}
+        {brewery.city}{brewery.state ? (', ' + brewery.state) : ''}
+      </Typography>
+      <Typography variant="body2">
+        {brewery.postal_code + ' ' + brewery.country + '\n'}
+      </Typography>
+      <Typography variant="body2">
+        Phone: {brewery.phone}
+      </Typography>
+      <Typography variant="body2">
+        Website: {brewery.website_url}
       </Typography>
     </CardContent>
-    <CardActions>
-      <Button size='small' fullWidth>View Detail</Button>
-    </CardActions>
   </Card>
 )
 
