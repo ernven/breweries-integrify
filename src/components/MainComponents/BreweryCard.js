@@ -1,8 +1,8 @@
 import { Card, CardContent, CardActions, Typography, Button } from '@mui/material'
 
 const BreweryCard = ({ brewery }) => (
-  <Card sx={{width: '18em', height: '13em'}}>
-    <CardContent sx={{height: '40%', padding: '2em'}}>
+  <Card sx={{width: '18em', height: '13em', borderRadius: '1.2em'}}>
+    <CardContent sx={{height: '35%', padding: '2.6em'}}>
       <Typography variant="body2">
         {brewery.name}
       </Typography>
