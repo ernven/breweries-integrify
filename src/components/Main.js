@@ -16,7 +16,7 @@ function Main () {
   }, [])
 
   return (
-    <div>
+    <div style={{backgroundColor: 'gray'}}>
       <Search />
       <BreweryList breweries={breweries} />
     </div>
