@@ -7,10 +7,12 @@ function Main ({ breweries }) {
   // This state stores the filter input to search for (default empty).
   const [filter, setFilter] = useState('')
 
-  // This function filters entries based on the input filter, using an array of each object's property values for comparison.
+  // This function filters entries based on the input filter.
+  // It is using an array of each object's property values for comparison with the user's input.
   const filterEntries = filter =>
     breweries.filter(i => Object.values(i).some(p => p ? p.includes(filter) : false))
 
+  // Depending on whether a filter is set, the passed props contains all entries or just the matching ones.
   return (
     <div style={{backgroundColor: 'WhiteSmoke', padding: '0 4em'}}>
       <Search setFilter={setFilter} />

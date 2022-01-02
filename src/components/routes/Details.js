@@ -4,6 +4,7 @@ import DetailNavBar from '../DetailComponents/DetailNavBar'
 import DetailCard from '../DetailComponents/DetailCard'
 
 const BreweryDetail = () => {
+  // We use the useLocation router hook to access the location object (which contains the passed state).
   const location = useLocation()
   
   return (

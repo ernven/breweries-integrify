@@ -22,6 +22,7 @@ const App = () => {
       .catch(err => console.log(err))
   }, [])
 
+  // React Router is used for routing.
   return (
     <BrowserRouter>
       <Header />
