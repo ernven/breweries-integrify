@@ -5,6 +5,8 @@ import SearchIcon from '@mui/icons-material/Search'
 
 import ClearButton from './ClearButton'
 
+import '../../css/App.css'
+
 // This component renders a search bar to filter the list with (done in Main.js) and a search button to trigger the action.
 // The bar features a clear all button for easy cleanup/reset.
 
@@ -24,13 +26,12 @@ const Search = ({ setFilter }) => {
   }
 
   return (
-    <div style={{padding: '3em 4em 0'}}>
+    <div id='SearchBar'>
 
       <TextField
         value={input}
         onChange={e => handleInput(e.target.value)}
         size='small'
-        sx={{width: '78%'}}
         InputProps={{startAdornment: (
             <InputAdornment position='start'>
               <SearchIcon />
@@ -38,7 +39,7 @@ const Search = ({ setFilter }) => {
         ), endAdornment: (<ClearButton active={active} clear={clearSearchBar} />), }}
       />
 
-      <Button size='small' sx={{paddingTop: '0.7em', marginLeft: '1.5em'}} onClick={() => setFilter(input)}>
+      <Button size='small' id='SearchButton' onClick={() => setFilter(input)}>
         Search Breweries
       </Button>
 

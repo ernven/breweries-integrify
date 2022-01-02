@@ -1,3 +1,37 @@
 body {
   margin: 0px;
 }
+
+/* Rules for bigger screens */
+@media only screen and (min-width: 1024px) {
+  .MuiGrid-root {
+    padding: 3em;
+  }
+  .MuiTextField-root {
+    width: 78%;
+  }
+  #SearchBar {
+    padding: 3em 4em 0;
+  }
+  #SearchButton {
+    padding-top: 0.7em;
+    margin-left: 1.5em;
+  }
+}
+
+/* Rules for mobile screens */
+@media only screen and (max-width: 1023px) {
+  .MuiGrid-root {
+    padding: 0 0 1em 0;
+  }
+  .MuiTextField-root {
+    width: 100%;
+  }
+  #SearchBar {
+    padding: 3em 0;
+  }
+  #SearchButton {
+    padding-top: 1.5em;
+    margin-left: 22%;
+  }
+}
