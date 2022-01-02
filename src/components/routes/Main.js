@@ -12,7 +12,7 @@ function Main ({ breweries }) {
     breweries.filter(i => Object.values(i).some(p => p ? p.includes(filter) : false))
 
   return (
-    <div style={{backgroundColor: 'WhiteSmoke'}}>
+    <div style={{backgroundColor: 'WhiteSmoke', padding: '0 4em'}}>
       <Search setFilter={setFilter} />
       {filter ? <BreweryList breweries={filterEntries(filter)} /> : <BreweryList breweries={breweries} />}
     </div>
