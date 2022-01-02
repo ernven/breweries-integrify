@@ -17,7 +17,11 @@ const Search = ({ setFilter }) => {
   const handleInput = input => input ? (setInput(input), setActive(true)) : clearSearchBar()
 
   // This function clears the search bar and resets the filter.
-  const clearSearchBar = () => (setInput(''), setFilter(''), setActive(false))
+  const clearSearchBar = () => {
+    setInput('')
+    setFilter('')
+    setActive(false)
+  }
 
   return (
     <div style={{padding: '3em 4em 0'}}>
