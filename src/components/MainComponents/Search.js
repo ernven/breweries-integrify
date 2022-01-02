@@ -45,7 +45,7 @@ const Search = ({ setFilter }) => {
         ), endAdornment: (<ClearButton active={active} clear={clearSearchBar} />), }}
       />
 
-      <Button size='small' sx={{top: '14%', marginLeft: '1.5em'}} onClick={() => setFilter(input)}>
+      <Button size='small' sx={{paddingTop: '0.7em', marginLeft: '1.5em'}} onClick={() => setFilter(input)}>
         Search Breweries
       </Button>
 

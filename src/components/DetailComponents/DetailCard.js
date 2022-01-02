@@ -1,8 +1,8 @@
-import { Card, CardContent, CardActions, Typography, Button } from '@mui/material'
+import { Card, CardContent, Box, Typography } from '@mui/material'
 
 const DetailCard = ({ brewery }) => (
-  <Card sx={{width: '18em', height: '13em', borderRadius: '1.2em'}}>
-    <CardContent sx={{padding: '2.6em'}}>
+  <Card sx={{margin: 'auto', width: '22em', height: '22em', borderRadius: '1.2em'}}>
+    <CardContent sx={{padding: '3.6em'}}>
 
       <Typography variant="h6">
         {brewery.name}
@@ -12,20 +12,23 @@ const DetailCard = ({ brewery }) => (
         {'Type: ' + brewery.brewery_type}
       </Typography>
 
-      <Typography>
-        {brewery.street}
-      </Typography>
-      <Typography variant="body2">
-        {brewery.city}{brewery.state ? (', ' + brewery.state) : ''}
-      </Typography>
-      <Typography variant="body2">
-        {brewery.postal_code + ' ' + brewery.country + '\n'}
-      </Typography>
+      <Box sx={{margin: '2em 0'}}>
+        <Typography>
+          {brewery.street}
+        </Typography>
+        <Typography variant="body2">
+          {brewery.city}{brewery.state ? (', ' + brewery.state) : ''}
+        </Typography>
+        <Typography variant="body2">
+          {brewery.postal_code + ' ' + brewery.country}
+        </Typography>
+      </Box>
+
       <Typography variant="body2">
         Phone: {brewery.phone}
       </Typography>
       <Typography variant="body2">
-        Website: {brewery.website_url}
+        Website: <a href={brewery.website_url}>{brewery.website_url}</a>
       </Typography>
     </CardContent>
   </Card>
