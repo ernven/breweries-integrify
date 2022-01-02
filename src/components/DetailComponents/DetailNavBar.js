@@ -12,7 +12,7 @@ const DetailNavBar = () => {
       variant="text"
       startIcon={<ArrowBackIosNewIcon />}
       onClick={() => navigate(-1)}
-      sx={{margin: '0.5em'}}
+      sx={{margin: '0.5em', height: '5vh'}}
     >
       List
     </Button>

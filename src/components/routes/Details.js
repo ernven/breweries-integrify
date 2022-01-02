@@ -10,7 +10,7 @@ const BreweryDetail = () => {
   return (
     <div style={{backgroundColor: 'WhiteSmoke'}}>
       <DetailNavBar />
-      <div style={{width: '100vw', height: '100vh'}}>
+      <div style={{width: '100vw', height: '75vh'}}>
         {location.state ? <DetailCard brewery={location.state} /> : null}
       </div>
     </div>
