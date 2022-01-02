@@ -33,3 +33,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Breweries Data
 
 Data displayed is from the [Open Brewery Database](https://www.openbrewerydb.org/documentation/01-listbreweries). Further information about the data structure can be found on their reference.
+
+In order for the application to perform a successful fetch request from the API, remember to set the following environmental variable:
+`REACT_APP_API_URL`
